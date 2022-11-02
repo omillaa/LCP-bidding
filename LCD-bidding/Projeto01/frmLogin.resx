@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Bem-vindo ao LCP Licitações – 
+estamos entusiasmados por ter você a 
+bordo e gostaríamos de agradecer em
+nome de toda a nossa empresa por 
+nos escolher. Acreditamos que nosso 
+produto o ajudará na gestão
+de suas licitações.</value>
+  </data>
 </root>
