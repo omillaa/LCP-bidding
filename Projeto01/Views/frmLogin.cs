@@ -16,5 +16,14 @@ namespace Projeto01
         {
             InitializeComponent();
         }
+
+        //Instancia dos forms
+        frmPrincipal frmPrincipal = null;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPrincipal = new frmPrincipal();
+            frmPrincipal.Show();
+        }
     }
 }

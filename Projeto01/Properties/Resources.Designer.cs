@@ -63,9 +63,39 @@ namespace Projeto01.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap engrangem2 {
+            get {
+                object obj = ResourceManager.GetObject("engrangem2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Engrenagem {
+            get {
+                object obj = ResourceManager.GetObject("Engrenagem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_tipo_gif {
             get {
                 object obj = ResourceManager.GetObject("Logo-tipo-gif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opções {
+            get {
+                object obj = ResourceManager.GetObject("opções", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
