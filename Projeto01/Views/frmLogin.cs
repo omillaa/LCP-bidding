@@ -23,7 +23,9 @@ namespace Projeto01
         private void button1_Click(object sender, EventArgs e)
         {
             frmPrincipal = new frmPrincipal();
+            frmPrincipal.lbUsuario.Text = txtEmail.Text;
             frmPrincipal.Show();
+
         }
     }
 }

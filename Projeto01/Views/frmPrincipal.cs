@@ -21,7 +21,7 @@ namespace Projeto01
         frmLogin frmLogin = null;
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void frmPrincipal_Activated(object sender, EventArgs e)
