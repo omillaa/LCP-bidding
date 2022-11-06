@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projeto01.Properties;
 
 namespace Projeto01
 {
@@ -19,22 +20,64 @@ namespace Projeto01
             InitializeComponent();
         }
         frmLogin frmLogin = null;
+        public int opcoes = 0;
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            picOP.Left = 3;
+        }
+        private void frmPrincipal_Resize(object sender, EventArgs e)
+        {
+            panelOpcoes.Height = this.Height;
         }
 
-        private void frmPrincipal_Activated(object sender, EventArgs e)
+        private void picOP_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
         }
 
-        private void blFecharForm_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            try
+            {
+                switch (opcoes)
+                {
+                    // Recolhe o menu de opções
+                    case 0:
+                        int l = 0;
+                        while (l > (-210))
+                        {
+                            panelOpcoes.Left = l;
+                            l--;                            
+                        }
+                        picOP.Image = Resources.op1;
+                        picOP.Left = 3;
+                        opcoes = 1;
+                        break;
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+                    // Mostra o menu de opções
+                    case 1:
+                        int j = -210;
+                        while (j !=0)
+                        {
+                            panelOpcoes.Left = j;
+                            j++;
+                        }
+                        picOP.Image = Resources.op0;
+                        picOP.Left = 3;
+                        opcoes = 0;
+                        break;
+
+                    default:
+
+                        break;
+                }
+                timer1.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
         }
     }

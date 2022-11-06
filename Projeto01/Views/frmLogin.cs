@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto01.Model;
+using Projeto01.Repositórios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,14 +20,46 @@ namespace Projeto01
         }
 
         //Instancia dos forms
-        frmPrincipal frmPrincipal = null;
+        frmPrincipal frmPrin = new frmPrincipal();
+        RepUserManager ru = new RepUserManager();
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPrincipal = new frmPrincipal();
-            frmPrincipal.lbUsuario.Text = txtEmail.Text;
-            frmPrincipal.Show();
+            //UserManager User = ru.Get(txtLoginEmail.Text, txtLoginSenha.Text);
+            //if (User != null)
+           // {
+               // frmPrin.lbUsuario.Text = User.Nome;
+                frmPrin.ShowDialog();
 
+           // }
+           // else
+              //  lbAlert.Visible = true;
+
+
+        }
+
+        private void btnChamaCadastro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabControl.SelectedTab = tabCadastro;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnChamaLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabControl.SelectedTab = tabLogin;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

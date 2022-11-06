@@ -28,78 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.blFecharForm = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelOpcoes = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbUsuario = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtProcurar = new RJCodeAdvance.RJControls.RJTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.picOP = new System.Windows.Forms.PictureBox();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
             this.licitaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
+            this.panelOpcoes.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelOpcoes
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.panel1.Controls.Add(this.blFecharForm);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-3, -5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(804, 42);
-            this.panel1.TabIndex = 0;
-            // 
-            // blFecharForm
-            // 
-            this.blFecharForm.AutoSize = true;
-            this.blFecharForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.blFecharForm.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blFecharForm.ForeColor = System.Drawing.Color.White;
-            this.blFecharForm.Location = new System.Drawing.Point(772, 8);
-            this.blFecharForm.Name = "blFecharForm";
-            this.blFecharForm.Size = new System.Drawing.Size(21, 23);
-            this.blFecharForm.TabIndex = 2;
-            this.blFecharForm.Text = "x";
-            this.blFecharForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.blFecharForm.Click += new System.EventHandler(this.blFecharForm_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Projeto01.Properties.Resources.opções;
-            this.pictureBox1.Location = new System.Drawing.Point(209, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.lbUsuario);
-            this.panel2.Controls.Add(this.rjTextBox1);
-            this.panel2.Controls.Add(this.menuStrip1);
-            this.panel2.Controls.Add(this.rjCircularPictureBox1);
-            this.panel2.Location = new System.Drawing.Point(-3, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(208, 535);
-            this.panel2.TabIndex = 1;
+            this.panelOpcoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelOpcoes.Controls.Add(this.panel3);
+            this.panelOpcoes.Controls.Add(this.lbUsuario);
+            this.panelOpcoes.Controls.Add(this.txtProcurar);
+            this.panelOpcoes.Controls.Add(this.menuStrip1);
+            this.panelOpcoes.Controls.Add(this.rjCircularPictureBox1);
+            this.panelOpcoes.Location = new System.Drawing.Point(-3, 4);
+            this.panelOpcoes.Name = "panelOpcoes";
+            this.panelOpcoes.Size = new System.Drawing.Size(208, 566);
+            this.panelOpcoes.TabIndex = 1;
             // 
             // panel3
             // 
@@ -121,28 +85,28 @@
             this.lbUsuario.Text = "<usuário>";
             this.lbUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rjTextBox1
+            // txtProcurar
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.BorderRadius = 6;
-            this.rjTextBox1.BorderSize = 1;
-            this.rjTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rjTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox1.Location = new System.Drawing.Point(8, 180);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "Procurar...";
-            this.rjTextBox1.Size = new System.Drawing.Size(191, 32);
-            this.rjTextBox1.TabIndex = 2;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtProcurar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtProcurar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtProcurar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtProcurar.BorderRadius = 6;
+            this.txtProcurar.BorderSize = 1;
+            this.txtProcurar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProcurar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProcurar.ForeColor = System.Drawing.Color.White;
+            this.txtProcurar.Location = new System.Drawing.Point(8, 180);
+            this.txtProcurar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProcurar.Multiline = false;
+            this.txtProcurar.Name = "txtProcurar";
+            this.txtProcurar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtProcurar.PasswordChar = false;
+            this.txtProcurar.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtProcurar.PlaceholderText = "Procurar...";
+            this.txtProcurar.Size = new System.Drawing.Size(191, 32);
+            this.txtProcurar.TabIndex = 2;
+            this.txtProcurar.Texts = "";
+            this.txtProcurar.UnderlinedStyle = false;
             // 
             // menuStrip1
             // 
@@ -161,6 +125,22 @@
             this.menuStrip1.Size = new System.Drawing.Size(176, 152);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // picOP
+            // 
+            this.picOP.Image = global::Projeto01.Properties.Resources.op0;
+            this.picOP.Location = new System.Drawing.Point(211, 6);
+            this.picOP.Name = "picOP";
+            this.picOP.Size = new System.Drawing.Size(34, 34);
+            this.picOP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picOP.TabIndex = 2;
+            this.picOP.TabStop = false;
+            this.picOP.Click += new System.EventHandler(this.picOP_Click);
             // 
             // dashboardToolStripMenuItem
             // 
@@ -192,29 +172,47 @@
             // 
             this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             // 
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            // 
+            // licitaçõesToolStripMenuItem
+            // 
+            this.licitaçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mapaToolStripMenuItem});
+            this.licitaçõesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.licitaçõesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("licitaçõesToolStripMenuItem.Image")));
+            this.licitaçõesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.licitaçõesToolStripMenuItem.Name = "licitaçõesToolStripMenuItem";
+            this.licitaçõesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 10);
+            this.licitaçõesToolStripMenuItem.Size = new System.Drawing.Size(100, 41);
+            this.licitaçõesToolStripMenuItem.Text = "Licitações";
+            // 
+            // mapaToolStripMenuItem
+            // 
+            this.mapaToolStripMenuItem.Name = "mapaToolStripMenuItem";
+            this.mapaToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.mapaToolStripMenuItem.Text = "Mapa";
             // 
             // rjCircularPictureBox1
             // 
@@ -232,55 +230,31 @@
             this.rjCircularPictureBox1.TabIndex = 2;
             this.rjCircularPictureBox1.TabStop = false;
             // 
-            // licitaçõesToolStripMenuItem
-            // 
-            this.licitaçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mapaToolStripMenuItem});
-            this.licitaçõesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.licitaçõesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("licitaçõesToolStripMenuItem.Image")));
-            this.licitaçõesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.licitaçõesToolStripMenuItem.Name = "licitaçõesToolStripMenuItem";
-            this.licitaçõesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 10);
-            this.licitaçõesToolStripMenuItem.Size = new System.Drawing.Size(100, 41);
-            this.licitaçõesToolStripMenuItem.Text = "Licitações";
-            // 
-            // mapaToolStripMenuItem
-            // 
-            this.mapaToolStripMenuItem.Name = "mapaToolStripMenuItem";
-            this.mapaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mapaToolStripMenuItem.Text = "Mapa";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 568);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.picOP);
+            this.Controls.Add(this.panelOpcoes);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
-            this.Text = "Form1";
-            this.Activated += new System.EventHandler(this.frmPrincipal_Activated);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.Resize += new System.EventHandler(this.frmPrincipal_Resize);
+            this.panelOpcoes.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label blFecharForm;
+        private System.Windows.Forms.Panel panelOpcoes;
         private CustomControls.RJControls.RJCircularPictureBox rjCircularPictureBox1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private RJCodeAdvance.RJControls.RJTextBox txtProcurar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
@@ -292,5 +266,7 @@
         public System.Windows.Forms.Label lbUsuario;
         private System.Windows.Forms.ToolStripMenuItem licitaçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mapaToolStripMenuItem;
+        private System.Windows.Forms.PictureBox picOP;
+        private System.Windows.Forms.Timer timer1;
     }
 }

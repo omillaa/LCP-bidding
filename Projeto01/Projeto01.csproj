@@ -62,6 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\UserManagerInterface.cs" />
+    <Compile Include="Model\UserManager.cs" />
+    <Compile Include="Repositórios\RepUserManager.cs" />
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,5 +130,12 @@
   <ItemGroup>
     <None Include="Resources\opções.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op0.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
